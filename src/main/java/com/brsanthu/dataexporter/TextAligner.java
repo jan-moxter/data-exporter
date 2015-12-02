@@ -159,7 +159,7 @@ import com.brsanthu.dataexporter.util.Util;
 public class TextAligner {
     
 	public int getRowHeight(int width, String data, AlignType alignType) {
-		List<String> alignedStrings = align(width, data.length(), alignType, data);
+		List<String> alignedStrings = align(width, data.isEmpty() ? 1 : data.length(), alignType, data);
 		int rowHeight = 0;
 		for (String line : alignedStrings) {
 			if (line.trim().length() > 0) {
